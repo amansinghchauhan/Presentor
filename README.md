@@ -27,3 +27,6 @@ So, here are some more things that can be added in the site to make the usabilit
 Well, these are all the easy changes and should not take more than an hour or two to work on. The challenge here is to allow the users to save the presentation in a video format without asking them to record it with a screen recorder.
 
 If you are able to do all these changes, you got a million dollar application with you.
+
+
+You can also use NodeJS to convert this Web Application into a Desktop Application and use it in a better way.
