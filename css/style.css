@@ -1,0 +1,452 @@
+/* Change Scroll Bar */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+/* Disable Highlight */
+
+::-moz-selection{
+    background-color:Transparent;
+    color:#000;
+}
+
+::selection {
+    background-color:Transparent;
+    color:#000;
+}
+
+/* Enable Highlight in Input & Textarea */
+
+input::-moz-selection,  textarea::-moz-selection{
+    background-color:#87cefa;
+    color:#000;
+}
+
+input::selection, textarea::selection {
+    background-color:#87cefa;
+    color:#000;
+}
+
+/* Start Styling of the App */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    min-height: 600px;
+    min-width: 700px;
+    overflow: hidden;
+}
+
+h3 {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+p{
+    z-index: 2;
+}
+
+img {
+    z-index: 2;
+}
+
+.presentor{
+    height: 75% ;
+}
+
+.items{
+    background-color: #99a1a9;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-bottom: 3px solid #ffffff;
+    z-index: 99998;
+    overflow-y: scroll;
+}
+
+.canvas{
+    background-color: #fff !important;         
+}
+
+.clear{
+    clear: both;
+}
+
+.timeline{
+    height: 120px !important;
+    width: 100%;
+    margin-left: -15px !important;
+    background-color: #99a1a9;
+    position: absolute;
+    z-index: 99998;
+    white-space: nowrap;
+    overflow-x: hidden;    
+    overflow-y: hidden;
+    padding: 0 20px;
+}
+
+.timeline_box{
+    width: 200px;
+    height: 120px !important;
+    border: 1px solid white;
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff;
+    border: 2px groove rgba(0,28,32,0.8);
+}
+
+.timeline_box img{
+    width: auto !important;
+    height: 80px !important;
+    max-width: 80px !important;
+}
+
+.timeline_box_left{
+    width: 100px;
+    height: 100%;
+    float: left;
+}
+
+.timeline_box_right{
+    width: 100px;
+    height: 100%;
+    float: left;
+}
+
+.timeline_box_row{
+    
+}
+
+.timeline_image{
+    float: left;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.timeline_image img{
+    width: 90px;
+    height: 90px;
+}
+
+.timeline_options_side{
+    float: left;
+    position: relative;
+    margin-top: 1px;
+    width: 30px;
+    height: 100px;
+}
+
+.timeline_options_side span{
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 6px 4px 6px 8px;
+    padding: 0;
+}
+
+.timeline_options_bottom{
+    margin-left: 1px;
+    width: 100px;
+}
+
+.timeline_options_bottom span{
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    padding: 0;
+}
+
+.timeline .delete-button{
+    background-color: transparent;
+    background-image: url(../images/assets/bin.png);
+    color: transparent;
+    cursor:pointer;
+    border:none;
+    width: 25px;
+    height: 25px;
+    margin: 5px 10px;
+}
+
+.timeline .delete-button:focus{
+    outline: none;
+}
+
+.timeline .play-button{
+    background-color: transparent;
+    background-image: url(../images/assets/play.png);
+    color: transparent;
+    margin: 5px 33px 5px 33px;
+    cursor:pointer;
+    border:none;
+    width: 35px;
+    height: 35px;
+}
+
+.timeline .play-button:focus{
+    outline: none;
+}
+
+.timeline .edit-button{
+    background-color: #ffffff;
+    background-image: url(../images/assets/edit-button.png);
+    color: transparent;
+    cursor:pointer;
+    border:none;
+    width: 25px;
+    height: 25px;
+    margin: 5px 10px;
+}
+
+.timeline .settings-button{
+    background-color: #ffffff;
+    background-image: url(../images/assets/settings.png);
+    color: transparent;
+    cursor:pointer;
+    border:none;
+    width: 25px;
+    height: 25px;
+    margin: 5px 5px 5px 20px;
+}
+
+.timeline .minus-button{
+    background-color: #fff;
+    color: #000;
+    font-size: 10pt;
+    cursor:pointer;
+    border:none;
+    width: 25px;
+    height: 25px;
+    margin: 5px 5px;
+}
+
+.timeline .plus-button{
+    background-color: #fff;
+    color: #000;
+    font-size: 10pt;
+    cursor:pointer;
+    border:none;
+    width: 25px;
+    height: 25px;
+    margin: 5px 5px;
+}
+
+.timeline .timeOption{
+    background-color: #e75a4d;
+    color: #fff;
+    font-size: 10pt;
+    cursor:pointer;
+    border:none;
+    width: 25px;
+    height: 25px;
+    margin: 5px 2px;
+}
+
+.title-row{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    cursor: move;
+}
+
+#settings-container,#text-edit-container{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    overflow: hidden;
+    padding: 100px;
+    display: none;
+}
+
+#settings-box,#text-edit-box{
+    background:rgba(255,255,255,1);
+    border-radius: 10px;
+    border: 1px solid #000;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    z-index: 99999;
+}
+
+.editTextArea{
+    overflow: auto;
+    resize: none;
+    outline: none;
+    border: 1px solid #888; 
+    width: 100%;
+    height: 75px;
+}
+
+.close {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.close:hover{
+    color: #ff3333;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.save, .editTextButton {
+    float: right;
+    color: #285f9f;
+    font-size: 28px;
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    opacity: 1;
+    border: 1px solid #285f9f;
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 5px 30px 0px 10px;
+}
+
+.editTextButton{
+    font-size: 20px !important;
+}
+
+.settingsButton{
+    margin: 10px auto;
+    width: 220px;
+}
+
+.save:hover, .editTextButton:hover{
+    color: #ff3333;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+    border: 1px solid #ff3333;
+    outline: none;
+}
+
+.save:focus, .close:focus, .editTextButton:focus{
+    outline: none;
+}
+
+.focusDraggable:hover{
+    outline: rgba(0,0,0,0.3) solid 1px;
+    cursor: default;
+    padding: 2px;
+}
+
+.animate{
+    word-wrap: break-word;
+}
+
+.settings-left label{
+    margin-top: 10px;
+}
+
+.settings-right label{
+    width: 228px;
+    float: left;
+    height: 85%;
+    margin-right: 20px;
+}
+
+#settings-box .settings-left, #text-edit-box .settings-left{
+    width: 230px;
+    float: left;
+    height: 32px;
+    margin-left: 20px;
+}
+
+#settings-box .settings-right , #text-edit-box .settings-right{
+    width: 228px;
+    float: left;
+    height: 32px;
+    margin-right: 20px;
+}
+
+
+
+#text-edit-container .settings-right div{
+    float: right;
+    margin-bottom: 10px;
+}
+
+#text-edit-container .settings-right div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#left-scroll{
+    width: 20px;
+    height: 120px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: #99a1a9;
+}
+
+#right-scroll{
+    width: 20px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: #99a1a9;
+}
+
+#left-scroll:hover, #right-scroll:hover{
+    cursor: pointer;
+    background-color: #d5d1b5;
+}
+
+input[type=text], input[type=number], input[type=checkbox], select {
+    width: 100%;
+    padding: 3px 0 3px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.canvas_image, .ui-wrapper{
+    width: auto;
+    height: 50px;
+    float: left;
+    margin: 3px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.canvas_pause, .canvas_blank{
+    width: auto;
+    height: 50px;
+}
