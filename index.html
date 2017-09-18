@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/jquery-ui.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/CCapture.min.js"></script>
+    <script src="js/download.js"></script>
+    <script src="js/Whammy.js"></script>
+    <script src="js/script_video.js"></script>
+    <meta charset="UTF-8">
+    <title>Presentor</title>
+</head>
+<body>
+    <div class="container-fluid"
+         style="position: absolute;bottom: 0px;top: 0px;left: 0px;right: 0px;">
+        <div class="row presentor"
+             style="height: 100%;position: relative;">
+            <div class="col-xs-3 tools items">
+                <h2>Elements</h2>
+                <h4>Blank Screen</h4>
+                <img src="images/assets/blank.png" class="tool canvas_blank" />
+                <h4>Pause</h4>
+                <img src="images/assets/pause.png" class="tool canvas_pause" />
+                <h4>Text</h4>
+                <h3 class="tool tool-1 canvas_text">Drag This to Add Your Text</h3>
+                <div class="clear"></div>
+                <h4>Animals</h4>
+                <img src="images/animals/animal1.png" class="tool canvas_image" />
+                <img src="images/animals/animal2.png" class="tool canvas_image" />
+                <img src="images/animals/animal3.png" class="tool canvas_image" />
+                <img src="images/animals/animal4.png" class="tool canvas_image" />
+                <img src="images/animals/animal5.png" class="tool canvas_image" />
+                <img src="images/animals/animal6.png" class="tool canvas_image" />
+                <img src="images/animals/animal7.png" class="tool canvas_image" />
+                <img src="images/animals/animal8.png" class="tool canvas_image" />
+                <img src="images/animals/animal9.png" class="tool canvas_image" />
+                <img src="images/animals/animal10.png" class="tool canvas_image" />
+                <img src="images/animals/animal11.png" class="tool canvas_image" />
+                <img src="images/animals/animal12.png" class="tool canvas_image" />
+                <img src="images/animals/animal13.png" class="tool canvas_image" />
+                <img src="images/animals/animal14.png" class="tool canvas_image" />
+                <img src="images/animals/animal15.png" class="tool canvas_image" />
+                <img src="images/animals/animal16.png" class="tool canvas_image" />
+                <h4>Buildings</h4>
+                <img src="images/buildings/building1.png" class="tool canvas_image" />
+                <img src="images/buildings/building2.png" class="tool canvas_image" />
+                <img src="images/buildings/building3.png" class="tool canvas_image" />
+                <img src="images/buildings/building4.png" class="tool canvas_image" />
+                <img src="images/buildings/building5.png" class="tool canvas_image" />
+                <img src="images/buildings/building6.png" class="tool canvas_image" />
+                <div class="clear"></div>
+                <h4>Comics</h4>
+                <img src="images/comics/comic1.png" class="tool canvas_image" />
+                <img src="images/comics/comic2.png" class="tool canvas_image" />
+                <img src="images/comics/comic3.png" class="tool canvas_image" />
+                <img src="images/comics/comic4.png" class="tool canvas_image" />
+                <div class="clear"></div>
+                <h4>People</h4>
+                <img src="images/people/people1.png" class="tool canvas_image" />
+                <img src="images/people/people2.png" class="tool canvas_image" />
+                <img src="images/people/people3.png" class="tool canvas_image" />
+                <img src="images/people/people4.png" class="tool canvas_image" />
+                <img src="images/people/people5.png" class="tool canvas_image" />
+                <img src="images/people/people6.png" class="tool canvas_image" />
+                <img src="images/people/people7.png" class="tool canvas_image" />
+                <img src="images/people/people8.png" class="tool canvas_image" />
+                <img src="images/people/people9.png" class="tool canvas_image" />
+                <img src="images/people/people10.png" class="tool canvas_image" />
+                <img src="images/people/people11.png" class="tool canvas_image" />
+                <div class="clear"></div>
+                <h4>Transportation</h4>
+                <img src="images/transportation/transportation1.png" class="tool canvas_image" />
+                <img src="images/transportation/transportation2.png" class="tool canvas_image" />
+                <img src="images/transportation/transportation3.png" class="tool canvas_image" />
+                <img src="images/transportation/transportation4.png" class="tool canvas_image" />
+                <img src="images/transportation/transportation5.png" class="tool canvas_image" />
+                <img src="images/transportation/transportation6.png" class="tool canvas_image" />
+            </div>
+            <div class="col-xs-9 canvas"
+                 style="background-color: beige;position: absolute;right: 0px;bottom: 0px;top: 0px;">
+            </div>
+        </div>
+        <div id="left-scroll">
+                <img src="images/assets/left-scroll.png" onclick="scrollTimeline('Go_L')" />
+        </div>
+        <div class="timeline"></div>
+        <div id="right-scroll">
+                <img src="images/assets/right-scroll.png" onclick="scrollTimeline('Go_R')" />
+        </div>
+    </div>
+    <div id="settings-container">
+        <div id="settings-box">
+            <input type="hidden" id="settingsElementId" value="elementId">
+            <input type="hidden" id="settingsElementType" value="elementType">
+            <div class="title-row">
+                <span class="close">&times;</span>
+                <div><h4>Properties</h4></div>
+            </div>
+            <div class="clear"></div>
+                    <div class="row">
+                      <div class="settings-left">
+                          <div><label for="selectAnimation">Animation</label></div>
+                      </div>
+                      <div class="settings-right">
+                            <select id="selectAnimation">
+                              <option value="blind">Blind</option>
+                              <option value="bounce">Bounce</option>
+                              <option value="clip">Clip</option>
+                              <option value="drop">Drop</option>
+                              <option value="explode">Explode</option>
+                              <option value="fade">Fade</option>
+                              <option value="fold">Fold</option>
+                              <option value="highlight">Highlight</option>
+                              <option value="puff">Puff</option>
+                              <option value="pulsate">Pulsate</option>
+                              <option value="scale">Scale</option>
+                              <option value="shake">Shake</option>
+                              <option value="size">Size</option>
+                              <option value="slide">Slide</option>
+                            </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="settings-left">
+                          <div><label for="selectStartTime">Start Time</label></div>
+                        </div>
+                        <div class="settings-right">
+                            <input id="selectStartTime" type="number" readonly />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="settings-left">
+                          <div><label for="selectEndTime">End Time</label></div>
+                        </div>
+                        <div class="settings-right">
+                            <input id="selectEndTime" type="number" readonly />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="settings-left">
+                          <div><label for="selectHeight">Height</label></div>
+                        </div>
+                        <div class="settings-right">
+                          <input id="selectHeight" type="number" placeholder="Leave Blank for AUTO." />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="settings-left">
+                          <div><label for="selectWidth">Width</label></div>
+                        </div>
+                        <div class="settings-right">
+                          <input id="selectWidth" type="number" placeholder="Leave Blank for AUTO." />
+                        </div>
+                    </div>
+            <div class="clear"></div>
+                <button class="save" onclick="changeSettings()">Save</button>
+                <button class="editTextButton" id="openEditText" onclick="openEditText()" style="display: none;">Edit Text</button>
+        </div>
+    </div>
+    <div id="text-edit-container">
+        <div id="text-edit-box">
+            <input type="hidden" id="textEditElementId" value="elementId">
+            <div class="title-row">
+                <span class="close">&times;</span>
+                <h4>Edit Text</h4>
+            </div>
+            <div>
+                <textarea class="editTextArea"></textarea>
+            </div>
+            <div class="row">
+                <div class="settings-left">
+                    <div><label for="font">Font</label></div>
+                </div>
+                <div class="settings-right">
+                    <select id="font">
+                          <option value="Arial" style="font-family: Arial;">Arial</option>
+                          <option value="Times New Roman" style="font-family: Times New Roman;">Times New roman</option>
+                          <option value="Helvetica" style="font-family: Helvetica;">Helvetica</option>
+                          <option value="Courier" style="font-family: Courier;">Courier</option>
+                          <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                          <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                          <option value="Palatino" style="font-family: Palatino;">Palatino</option>
+                          <option value="Garamond" style="font-family: Garamond;">Garamond</option>
+                          <option value="Bookman" style="font-family: Bookman;">Bookman</option>
+                          <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
+                          <option value="Trebuchet MS" style="font-family: Trebuchet MS;">Trebuchet MS</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="settings-left">
+                    <div><label for="fontSize">Font Size</label></div>
+                </div>
+                <div class="settings-right">
+                    <select id="fontSize">
+                          <option value="30px">30</option>
+                          <option value="40px">40</option>
+                          <option value="50px">50</option>
+                          <option value="60px">60</option>
+                          <option value="70px">70</option>
+                          <option value="80px">80</option>
+                          <option value="90px">90</option>
+                          <option value="100px">100</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="settings-left">
+                    <div><label for="fontColor">Font Color</label></div>
+                </div>
+                <div class="settings-right">
+                    <select id="fontColor">
+                          <option value="#ff0400" style="background-color: #ff0400; color: #fff;">Red</option>
+                          <option value="#ff00ff" style="background-color: #ff00ff; color: #fff;">Pink</option>
+                          <option value="#10B49C" style="background-color: #10B49C; color: #fff;">Cool Blue</option>
+                          <option value="#FA8072" style="background-color: #FA8072; color: #fff;">Salmon</option>
+                          <option value="#133B2F" style="background-color: #133B2F; color: #fff;">Dark Green</option>
+                          <option value="#d1b022" style="background-color: #d1b022; color: #fff;">Not Brown</option>
+                          <option value="#363636" style="background-color: #363636; color: #fff;">Not so Dark Black</option>
+                          <option value="#ffd700" style="background-color: #ffd700; color: #fff;">Sunny Yellow</option>
+                          <option value="#8a2be2" style="background-color: #8a2be2; color: #fff;">Purple, may be.</option>
+                          <option value="#76ee00" style="background-color: #76ee00; color: #fff;">Green like a Parrot</option>
+                          <option value="#000000" style="background-color: #000000; color: #fff;">Perfect Black</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="settings-left">
+                    <div><label for="fontStyle">Font Style</label></div>
+                </div>
+                <div class="settings-right">
+                    <select id="fontStyle">
+                          <option value="normal" style="font-style: normal;">Normal</option>
+                          <option value="italic" style="font-style: italic;">Italic</option>
+                          <option value="oblique" style="font-style: oblique;">Oblique</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="settings-left">
+                    <div><label for="selectBold">Bold</label></div>
+                </div>
+                <div class="settings-right">
+                    <input type="checkbox" name="selectBold" id="selectBold">
+                </div>
+            </div>
+            <div class="row">
+                <div class="settings-left">
+                    <div><label for="selectUnderline">Underline</label></div>
+                </div>
+                <div class="settings-right">
+                    <input type="checkbox" name="selectUnderline" id="selectUnderline">
+                </div>
+            </div>
+            <div class="clear"></div>
+            <button class="save" onclick="changeText()">Save</button>
+        </div>
+    </div>
+</body>
+</html>
