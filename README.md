@@ -3,13 +3,14 @@ This application allows users to create Slide Shows(Animations) using the provid
 
 What can be done with this Application?
 1) Create Presentations/Animations for your personal/professional use.
-2) Just Drag & Drop items to add media to the Presentation.
-3) Change the Animation, Time or Size of the Images.
-4) Same can be done with TEXT too but alongwith all this, you can change the Font, Color & Styling of the Text.
-5) You can change the Text to whatever you want to Write.
-6) Add Blank Screens to create a new Slide.
-7) Add Pause/Breaks to give people more time to read/watch.
-8) Play the Animation by clicking the Play Button.
+2) Just Drag & Drop items to add an element to the Presentation.
+3) Delete any element.
+4) Change the Animation, Time or Size of the Images.
+5) Same can be done with TEXT too but alongwith all this, you can change the Font, Color & Styling of the Text.
+6) You can change the Text to whatever you want to Write.
+7) Add Blank Screens to create a new Slide.
+8) Add Pause/Breaks to give people more time to read/watch.
+9) Play the Animation by clicking the Play Button.
 
 
 What more can be done that I didn't do?
